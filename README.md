@@ -2,6 +2,7 @@
 **Parcourez** ce qu'est l'IA et ce qu'elle n'est pas pour mieux comprendre les **risques existentiels** qu'elle pose.
 
 Lien : https://doweeee.github.io/Arbre-existentiel/
+
 **Explications simplifiées et analogies.**
 
 Visuel d'arbre :
