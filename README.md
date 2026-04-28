@@ -9,3 +9,5 @@ Visuel d'arbre :
 - 3 branches principales : Ce qu'est l'IA ; Idées reçues ; et Risques rexistentiels
 
 Lien : https://doweeee.github.io/Arbre-existentiel/
+
+*No computer skill recquired to build or needed to see*
