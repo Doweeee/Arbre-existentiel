@@ -10,6 +10,10 @@ Visuel d'arbre :
 
 Lien : https://doweeee.github.io/Arbre-existentiel/
 
+Pour plus d'information ou rejoindre le mouvement Pause IA :
+Site web Pause IA : https://pauseia.fr/fr
+Rejoindre Pause IA : https://pauseia.fr/rejoindre
+
 ---
 
 *No computer skill recquired to build or needed to see*
