@@ -244,7 +244,7 @@
         grad.addColorStop(0.45, 'rgba(0,0,0,0.55)');
         grad.addColorStop(0.75, 'rgba(0,0,0,0.18)');
         grad.addColorStop(1,    'rgba(0,0,0,0)');
-        ctx.globalAlpha=alp;
+        ctx.globalAlpha=la;
         ctx.fillStyle=grad;
         ctx.fillRect(cxh-rad,cyh-rad,rad*2,rad*2);
         ctx.restore();
