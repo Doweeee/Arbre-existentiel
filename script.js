@@ -226,32 +226,27 @@
       var isOrange=!!orangeLabels[n.id];
       var fontWeight=isOrange?'700':'300';
 
-      // Dark rounded backdrop behind the label, only after THIS node has been clicked.
+      // Soft radial halo behind the label, only after THIS node has been clicked.
       if(backdropLabels[n.id] && clickedLabels[n.id]){
         ctx.save();
         ctx.font=fontWeight+' '+fs+'px Raleway,sans-serif';
         var tw=ctx.measureText(n.label).width;
-        var padX=4,padY=1;
-        var bx,by=lp.lY-fs*0.78,bh=fs*1.18;
-        if(lp.ta==='center'){bx=lp.lX-tw/2-padX;}
-        else if(lp.ta==='right'){bx=lp.lX-tw-padX;}
-        else{bx=lp.lX-padX;}
-        var bw=tw+padX*2;
-        ctx.globalAlpha=alp*0.92;
-        ctx.fillStyle='rgba(1,6,22,0.95)';
-        var rr=4;
-        ctx.beginPath();
-        ctx.moveTo(bx+rr,by);
-        ctx.lineTo(bx+bw-rr,by);
-        ctx.quadraticCurveTo(bx+bw,by,bx+bw,by+rr);
-        ctx.lineTo(bx+bw,by+bh-rr);
-        ctx.quadraticCurveTo(bx+bw,by+bh,bx+bw-rr,by+bh);
-        ctx.lineTo(bx+rr,by+bh);
-        ctx.quadraticCurveTo(bx,by+bh,bx,by+bh-rr);
-        ctx.lineTo(bx,by+rr);
-        ctx.quadraticCurveTo(bx,by,bx+rr,by);
-        ctx.closePath();
-        ctx.fill();
+        // Halo center: aligned with the actual text (depends on textAlign)
+        var cxh;
+        if(lp.ta==='center'){cxh=lp.lX;}
+        else if(lp.ta==='right'){cxh=lp.lX-tw/2;}
+        else{cxh=lp.lX+tw/2;}
+        var cyh=lp.lY-fs*0.18;
+        // Radius scales with text width and font size
+        var rad=Math.max(tw*0.75, fs*3.2);
+        var grad=ctx.createRadialGradient(cxh,cyh,0,cxh,cyh,rad);
+        grad.addColorStop(0,    'rgba(0,0,0,0.88)');
+        grad.addColorStop(0.45, 'rgba(0,0,0,0.55)');
+        grad.addColorStop(0.75, 'rgba(0,0,0,0.18)');
+        grad.addColorStop(1,    'rgba(0,0,0,0)');
+        ctx.globalAlpha=alp;
+        ctx.fillStyle=grad;
+        ctx.fillRect(cxh-rad,cyh-rad,rad*2,rad*2);
         ctx.restore();
       }
 
