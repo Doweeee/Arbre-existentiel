@@ -1,5 +1,7 @@
-Parcourez ce qu'est l'IA et ce qu'elle n'est pas pour mieux comprendre les risques existentiels qu'elle pose.
-Explications simplifiées et analogies.
+## Comprendre l'IA et ses risques existentiels
+**Parcourez** ce qu'est l'IA et ce qu'elle n'est pas pour mieux comprendre les **risques existentiels** qu'elle pose.
+
+=> **Explications simplifiées et analogies.**
 
 Visuel d'arbre :
 - Racine : modèle fondation
