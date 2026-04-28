@@ -363,9 +363,7 @@
 
   function openBubble(n){
     bblT.textContent=n.btitle||n.label;
-    bblP.innerHTML = n.text.split('\n\n').map(function(p){
-  return '<p>' + p.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</p>';
-}).join('');
+    bblP.textContent=n.text;
     var hasImg=!!n.img;
     var size; // 'lg' | 'md' | 'sm'
     if(hasImg){
