@@ -117,12 +117,12 @@ canvas {
 
 .b-img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
   display: block;
   margin-bottom: 16px;
-  object-fit: contain;
-  max-height: 260px;
   border: 1px solid rgba(247, 147, 29, 0.20);
+}
 }
 
 .b-text {
