@@ -130,14 +130,7 @@ canvas {
   font-size: 14.5px;
   line-height: 1.94;
   color: #ffffff;
-}
-
-.b-text p {
-  margin: 0 0 14px 0;
-}
-
-.b-text p:last-child {
-  margin-bottom: 0;
+  white-space: pre-line;
 }
 
 #hint {
